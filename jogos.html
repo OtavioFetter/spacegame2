@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="jogos.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--tag para que quando o site for aberto no navegador, o padrão não seja apenas desktop, e sim responsivo-->
+        <title>Space Game</title>
+    </head>
+    <body>
+        <section>
+            <header>
+            <img src="img/Design sem nome (6).png" class="logo">
+                <div class="menu">
+                <a href="home.html">Home</a>
+                <a href="curiosidade.html">Curiosidades</a>
+                <a href="jogos.html">Jogos</a>
+                <a href="login.html">Login</a>
+                </div> <!--menu-->
+                <div class="hamburguer">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div> <!--hamburguer-->
+            </header>
+        </section>
+        <div class="cards">
+
+                <div class="card">
+                <div class="fundo">
+                    <img src="img/cyberpunk.png" alt="">
+                    <div class="imgFundo"></div> <!--imgFundo-->
+                </div> <!--fundo-->
+                <div class="descricao">
+                <h2>Cyberpunk 2077</h2>
+                <p>Cyberpunk 2077 é um jogo de RPG de ação desenvolvido pela CD Projekt Red e lançado em dezembro de 2020. O jogo se passa em Night City, uma metrópole futurista obcecada por poder, glamour e modificações cibernéticas.</p>
+                <input type="button" value="Ler Mais">
+                </div> <!--descrição-->
+                </div> <!--card-->
+
+                <div class="card">
+                <div class="fundo">
+                <img src="img/elden ring.png" alt="">
+                <div class="imgFundo"></div> <!--imgFundo-->
+                </div> <!--fundo-->
+                <div class="descricao">
+                <h2>Elden Ring</h2>
+                <p>O mundo de "Elden Ring" é um vasto reino chamado de "The Lands Between" (As Terras Intermediárias), que está em ruínas após um evento catastrófico conhecido como "Shattering" (Ruptura). Seres fantásticos, criaturas assustadoras e forças sombrias vagam livremente.</p>
+                <input type="button" value="Ler Mais">
+                </div> <!--descrição-->
+                </div> <!--card-->
+
+                <div class="card">
+                <div class="fundo">
+                <img src="img/witcher.png" alt="">
+                <div class="imgFundo"></div> <!--imgFundo-->
+                </div> <!--fundo-->
+                <div class="descricao">
+                <h2>The Witcher 3: Wild Hunt</h2>
+                <p>The Witcher 3: Wild Hunt é um jogo de RPG de ação desenvolvido pela CD Projekt Red, lançado em 2015. Ele é baseado na série de livros do autor polonês Andrzej Sapkowski e segue as aventuras de Geralt de Rivia, um caçador de monstros conhecido como "witcher".</p>
+                <input type="button" value="Ler Mais">
+                </div> <!--descrição-->
+                </div> <!--card-->
+
+                <div class="card">
+                    <div class="fundo">
+                    <img src="img/stardew.png" alt="">
+                    <div class="imgFundo"></div> <!--imgFundo-->
+                    </div> <!--fundo-->
+                    <div class="descricao">
+                    <h2>Stardew Valley</h2>
+                    <p>Você acaba de herdar uma fazenda por parte do seu avô e agora, nesse incrível jogo de simulação em estilo RPG, sua nova vida como homem do campo acaba de começar e você terá de aprender, se adaptar e fazer de sua nova terra próspera.</p>
+                    <input type="button" value="Ler Mais">
+                    </div> <!--descrição-->
+                </div> <!--card-->
+
+                <div class="card">
+                    <div class="fundo">
+                    <img src="img/outlast.png" alt="">
+                    <div class="imgFundo"></div> <!--imgFundo-->
+                    </div> <!--fundo-->
+                    <div class="descricao">
+                    <h2>Outlast</h2>
+                    <p>Este jogo coloca você na pele de Miles, um repórter que é convidado por um desconhecido para fazer uma matéria sobre o sanatório Mount Massive, e sobre os maus tratos sofridos pelos pacientes. Porém, ao chegar, o mesmo se surpreende com tamanha carnificina e sangue espalhados pelo lugar, e com insanos andando em liberdade e prontos para continuar suas atividades assassinas, você conseguirá escapar? Não recomendado para menores de 18 anos!</p>
+                    <input type="button" value="Ler Mais">
+                    </div> <!--descrição-->
+                </div> <!--card-->
+
+                    <div class="card">
+                        <div class="fundo">
+                        <img src="img/undertale.png" alt="">
+                        <div class="imgFundo"></div> <!--imgFundo-->
+                        </div> <!--fundo-->
+                        <div class="descricao">
+                        <h2>Undertale</h2>
+                        <p>A história de um humano que acaba caindo em um mundo dominado por monstros e terá que encontrar uma rota para voltar ao mundo normal, estando acompanhado por diversos personagens e uma trilha sonora maravilhosa.</p>
+                        <input type="button" value="Ler Mais">
+                        </div> <!--descrição-->
+                    </div> <!--card-->
+                    <script type="text/javascript">
+                        function menu2Menu(){
+                var toggleMenu = document.querySelector('.toggle')
+                toggleMenu.classList.toggle('active')
+            }
+
+            const hamburguer = document.querySelector(".hamburguer");
+            const menu = document.querySelector(".menu");
+
+            hamburguer.addEventListener("click", () => {
+                hamburguer.classList.toggle('active');
+                menu.classList.toggle('active');
+            })
+                    </script>
+        </div> <!--cards-->
+    </body>
+</html>

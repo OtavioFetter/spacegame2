@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900&display=swap'); 
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    position: relative;
+    max-width: 80px; 
+}
+
+.menu {
+    position: relative;
+    display: flex;
+}
+
+.menu a {
+    display: inline-block;
+    color:#333; 
+    text-decoration: none; /*tira as decorações que haviam no texto (nesse caso, o sublinhado do hiperlink)*/
+    font-weight: 560;
+    margin-right: 15px;
+    margin-left: 40px;
+    font-size: 20px;
+}
+
+
+.cards {
+    max-width: 1200px;
+    margin: auto; 
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width:300px;
+    margin:10px;
+    transition: all 300ms;
+}
+
+.card:hover {
+    width: 350px;
+}
+
+.card .fundo {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card .fundo img {
+    width: 250px;
+    margin: auto;
+    display: block;
+    position: relative; 
+    top: 40px;
+    z-index: 1;
+    transition: all 400ms;
+    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5));
+}
+
+.card:hover .fundo img {
+    top: 0px;
+}
+
+.card .imgFundo {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.card:nth-of-type(1) .imgFundo {
+    background-image: url(../home/img/bg1.jpg);
+}
+
+.card:nth-of-type(2) .imgFundo {
+    background-image: url(../home/img/bg2.jpg);
+}
+
+.card:nth-of-type(3) .imgFundo {
+    background-image: url(../home/img/bg3.jpg);
+}
+.card:nth-of-type(4) .imgFundo {
+    background-image: url(../home/img/bg1.jpg);
+}
+
+.card:nth-of-type(5) .imgFundo {
+    background-image: url(../home/img/bg2.jpg);
+}
+
+.card:nth-of-type(6) .imgFundo {
+    background-image: url(../home/img/bg3.jpg);
+}
+
+
+.card .descricao {
+    background: #fff;
+    margin-top:-10px;
+    padding: 20px;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.card .descricao h2 {
+    margin-top: 10px;
+}
+
+.card .descricao p {
+    margin-top: 10px;
+    color: #535151;
+}
+
+.card .descricao input { 
+    background: #a82d9c;
+    margin-top: 20px;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 40px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 300ms;
+}
+
+.card .descricao input:hover { 
+    background: #6d0b63;
+}
+
+.hamburguer {
+    display: none; 
+    cursor: pointer; 
+}
+
+.bar {
+    display: block; 
+    width: 28px; 
+    height: 3px; 
+    border-radius: 2px; 
+    margin: 5px auto; 
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 998px) {
+    header {
+        padding: 20px; 
+    }
+
+    header .logo {
+        max-width: 60px; 
+    }
+
+    header .menu { 
+        position: absolute;
+        left: -200%;
+        top: 70px;
+        gap: 0;
+        border-radius: 0 0 20px 20px;
+        background: #fff;
+        text-align: center; 
+        flex-direction: column; 
+        width: 100%; 
+        transition: 0.3s; 
+    }
+
+    header .menu a {
+        margin: 16px 0;
+    }
+
+    .menu.active {
+        left: 0;
+        background: #fff;
+        z-index: 10;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+    }
+
+    .hamburguer {
+        display: block;
+    }
+
+    .hamburguer.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburguer.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburguer.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}

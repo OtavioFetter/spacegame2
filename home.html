@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="home.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--tag para que quando o site for aberto no navegador, o padrão não seja apenas desktop, e sim responsivo-->
+        <title>Space Game</title>
+    </head>
+    <body>
+        <section>
+            <div class="circulo"></div> <!--circulo-->
+            <header>
+            <img src="img/Design sem nome (6).png" class="logo">
+                <div class="menu">
+                <a href="home.html">Home</a>
+                <a href="curiosidade.html">Curiosidades</a>
+                <a href="jogos.html">Jogos</a>
+                <a href="login.html">Login</a>
+                </div> <!--menu-->
+                <div class="hamburguer">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div> <!--hamburguer-->
+            </header>
+            <div class="content">
+                <div class="text">
+                <h2>Uma nova jornada<br>Com <span class="span">Space Game</span></h2>
+                <p>Bem-vindo ao Space Game, informações e curiosidades sobre os melhores jogos, você encontra aqui. No nosso site, você encontrará uma vasta seleção dos jogos mais empolgantes e viciantes do mercado. Dos clássicos atemporais aos lançamentos mais recentes, estamos sempre atualizados para oferecer a você uma experiência de jogo de alta qualidade.</p>
+                <a href="#" class="LerMais">Ler Mais</a>
+            </div> <!--text-->
+            <div class="imgbox">
+                <img src="img/img1.png" class="controle">
+            </div> <!--imgbox-->
+            </div> <!--content-->
+            <ul class="cores">
+                <li><img src="img/img1.png" onclick="imgSlider('img/img1.png');changeCircleColor('#A82D9C')"> </li>
+                <li><img src="img/img2.png" onclick="imgSlider('img/img2.png');changeCircleColor('#017430')"> </li>
+                <li><img src="img/img3.png" onclick="imgSlider('img/img3.png');changeCircleColor('#740127')"> </li>
+            </ul> <!--cores-->
+            <ul class="social">
+                <li><a href="#"><img src="img/facebook.png"></a></li>
+                <li><a href="#"><img src="img/instagram.png"></a></li>
+                <li><a href="#"><img src="img/twitter.png"></a></li>
+            </ul> <!--social-->
+        </section>
+        <script type="text/javascript">
+            function imgSlider(anything){
+                document.querySelector('.controle').src = anything;
+            }
+
+            function changeCircleColor(color){
+                const circulo = document.querySelector('.circulo');
+                circulo.style.background = color; 
+            }
+
+            function menu2Menu(){
+                var toggleMenu = document.querySelector('.toggle')
+                toggleMenu.classList.toggle('active')
+            }
+
+            const hamburguer = document.querySelector(".hamburguer");
+            const menu = document.querySelector(".menu");
+
+            hamburguer.addEventListener("click", () => {
+                hamburguer.classList.toggle('active');
+                menu.classList.toggle('active');
+            })
+        </script>
+    </body>
+    </html>

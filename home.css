@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900&display=swap'); /*fonte*/
+
+*{ /*resetando as margens do site que o navegador aplica*/
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    position: relative;
+    max-width: 80px; /*tamanho máximo da logo*/
+}
+
+.menu {
+    position: relative;
+    display: flex;
+}
+
+.menu a {
+    display: inline-block;
+    color:#333; /*cor do texto*/
+    text-decoration: none; /*tira as decorações que haviam no texto (nesse caso, o sublinhado do hiperlink)*/
+    font-weight: 560;
+    margin-right: 15px;
+    margin-left: 40px;
+    font-size: 20px;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content .text {
+    position: relative;
+    max-width: 690px;
+}
+
+.content .text h2 {
+    color: #333;
+    font-size: 4em;
+    line-height: 1.4em;
+    font-weight: 560;
+}
+
+.content .text h2 span {
+    color:#a82d9c;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+.content .text p {
+    color: #333;
+
+}
+
+.content .text a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #a82d9c;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 550;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.content .imgbox {
+    width: 750px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: 50px;
+}
+
+.content .imgbox img {
+    width: 600px;
+    max-width: 600px;
+
+}
+
+.cores {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.cores li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.cores li:hover {
+    transform:translateY(-15px);
+}
+
+.cores li img {
+    max-width: 100px;
+}
+
+.social {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.social li {
+    list-style: none;
+}
+
+.social li a {
+    display: inline-block;
+    margin: 5px 0;
+    transform: scale(0.6);
+    filter: invert(1);
+}
+
+.circulo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:#a82d9c;
+    clip-path: circle(650px at right 800px);
+}
+
+.hamburguer {
+    display: none; /*para ele não aparecer na tela*/
+    cursor: pointer; /*para o mouse aparecer quando passar por cima dele*/
+}
+
+.bar {
+    display: block; /*para os elementos ficarem um embaixo do outro*/
+    width: 28px; /*largura*/
+    height: 3px; /*altura*/
+    border-radius: 2px; /*arredondar a borda*/
+    margin: 5px auto; /*espaço*/
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 998px) { /*tudo que estiver abaixo do max-width vai ser estilizado de acordo com os comandos abaixo*/
+    header {
+        padding: 20px; /*espaço entre o elemento e a borda*/
+    }
+
+    header .logo {
+        max-width: 60px; /*tamanho maximo que ocupa*/
+    }
+
+    header .menu { 
+        position: absolute;
+        left: -200%;
+        top: 70px;
+        gap: 0;
+        border-radius: 0 0 20px 20px;
+        background: #fff;
+        text-align: center; /*centralizar*/
+        flex-direction: column; /*deixar em coluna*/
+        width: 100%; /*para pegar 100% da tela*/
+        transition: 0.3s; /*transição*/
+    }
+
+    header .menu a {
+        margin: 16px 0;
+    }
+
+    .menu.active {
+        left: 0;
+        background: #fff;
+        z-index: 10;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+    }
+    
+    section {
+        padding: 40px 40px 120px; /*espaço entre o elemento e a borda*/
+    }
+
+    .content {
+        flex-direction: column; /*deixa em formato de coluna*/
+        margin-top: 100px; /*o espaço que fica entre a logotipo e o texto (entre o elemento e o que estiver acima dele)*/
+    }
+
+    .content .text h2 {
+        font-size: 2.5em; /*mudar o tamanho do texto*/
+        margin-bottom: 15px; /*espaço entre o h2 e o p*/
+    }
+
+    .content .text {
+        max-width: 100%; /*deixar a div do texto preencher 100% da linha*/
+    }
+
+    .circulo {
+        clip-path: circle(300px at center bottom);
+    }
+
+    .content .imgbox {
+        max-width: 100%; /*tamanho maximo que a imagem ocupa*/
+        justify-content: center;
+    }
+
+    .content .imgbox img {
+        max-width: 260px; /*tamanho maximo da imagem*/
+    }
+
+    .cores li img {
+        max-width: 80px; /*tamanho maximo da imagem*/
+    }
+
+    .social {
+        background: #a82d9c;
+        right: 0;
+        width: 50px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        top: 680px; /*a distancia que o item fica do topo da pagina*/
+    }
+
+    .hamburguer {
+        display: block;
+    }
+
+    .hamburguer.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburguer.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburguer.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
